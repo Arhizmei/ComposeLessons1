@@ -22,8 +22,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             Row(modifier = Modifier
-                .background(Color.Gray)
-                .fillMaxSize(),
+                .background(Color.Gray).fillMaxWidth().fillMaxHeight(0.5f),
             horizontalArrangement = Arrangement.SpaceEvenly) {
 
             Column(
@@ -32,7 +31,7 @@ class MainActivity : ComponentActivity() {
                 Text(text = "Hello world!")
                 Text(text = "Second line")
                 Text(text = "Third line") }
-        Column(
+        Column(modifier = Modifier.background(Color.Green).fillMaxHeight(0.5f),
             verticalArrangement = Arrangement.SpaceAround,
             horizontalAlignment = Alignment.End){
             Text(text = "Hello world!")
